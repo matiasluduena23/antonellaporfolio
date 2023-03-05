@@ -1,27 +1,28 @@
+@charset 'utf-8';
 
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html{
-  scroll-behavior: smooth;
-}
-body{
-  font-family: sans-serif;
-  overflow-x: hidden;
-}
+//variables and  functions
+@import './utilities/variables';
 
-// .scroll-container{
-//   display: block;
-//   overflow-y: scroll;
-//   scroll-behavior: smooth;
-// }
+
+
+//base 
+@import './base/reset';
+
+
+//colors
+@import './utilities/colors';
+
+//components
+@import './components/card';
+
+
+
 
 #header{
   height: 100vh;
-  scroll-behavior: smooth;
+  background: url('https://images.unsplash.com/photo-1573164574308-edcb95e8b261?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80') 
+  no-repeat center center/cover;
 }
 section{
 
