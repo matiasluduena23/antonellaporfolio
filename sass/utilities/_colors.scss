@@ -23,22 +23,22 @@
   }
 
   @if($val != hsl(0, 0%, 100%) and $val != hsl(0, 0%, 0%) ) {
-    //light variations
+    //light variations text
     @for $i from 1 through 9 {
       .text-#{$key}-light-#{$i} {
         color: mix(hsl(0, 0%, 100%), $val, $i * 10%);
       }
-
+      //Hover text light variations
       .text-hover-#{$key}-light-#{$i} {
         &:hover{
         color: mix(hsl(0, 0%, 100%), $val, $i * 10%);
         }
       }
-
+      //light variations bg
       .bg-#{$key}-light-#{$i}{
         background-color: mix(hsl(0, 0%, 100%), $val, $i * 10%);
       }
-
+      //hover background light variations bg
       .bg-hover-#{$key}-light-#{$i} {
         &:hover{
         background-color: mix(hsl(0, 0%, 100%), $val, $i * 10%);

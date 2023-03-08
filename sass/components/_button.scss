@@ -1,3 +1,5 @@
+
+//create buttons mixin
 @mixin btn($bg-color: #f4f4f4){
   text-decoration: none;
   cursor: pointer;
@@ -12,6 +14,7 @@
   @include btn;
 }
 
+//create buttons colors
 @each $key, $val in $colors {
   .btn-#{$key} {
    @include btn($val);
@@ -22,6 +25,7 @@
    }
   }
 
+  //outline button
   .btn-outline-#{$key} {
     @include btn(#fff);
     border: $base-border-thinckness solid $val;
@@ -30,4 +34,16 @@
         background-color: $val;
     }
   }
+
+  //color complement button
+  .btn-complement-#{$key}{
+    @include btn($val);
+    color: light-component($val);
+    &:hover {
+      color: $val;
+      background-color: light-component($val);
+    }
+  }
 }
+
+
